@@ -3,51 +3,69 @@
 <!--Css-->
 
 <head> <!-- serve para iniciar o cabeçalho do site. Nele estarão contidas outras TAG's como "title", "meta" e "style"-->
-    <link rel="icon" href="https://via.placeholder.com/70x70">
-    <link rel="stylesheet" href="./mvp.css">
-
     <meta charset="utf-8"> <!-- serve para funcionar os acentos em palavras-->
-    <meta name="description" content="My description">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
 
 <!--Css-->
 
-<!--Aba do Navegador-->
-    <title>Editora Unifeso</title>
+<link rel="stylesheet" type="text/css" href="css/fonts-icones.css">
 
-<!--Aba do Navegador-->
 
-</head>
+<!--Início Aba do Navegador-->
+    <title>Editora Unifeso</title> 
+
+<!--Fim Aba do Navegador-->
+
+</head> <!-- finaliza a TAG "head"-->
 
 <!--Cabecalho-->
-<body> <!-- a TAG "body" inicia o corpo de site, todo conteúdo posto após ela será exibida no navegador. O atributo "bgcolor" define qual será a cor de fundo-->
+<body>
     <header>
-        <nav>
-            <a> <img src="logo.PNG"></a>
-            <ul>
-                <li><a href="https://www.unifeso.edu.br/editora/sobre.php">LOGIN</a></li>
-                <li><a href="https://www.unifeso.edu.br/editora/informacoes.php">PUBLICAR</a></li>
-            </ul>
+        <div class="container"><!--Começo do Container-->
+            <div class="logo"><img src="logo.PNG"></div>
+            <div class="pesquisar"><!--Começo da barra de pesquisa interativa-->
+                <div class="search-box">
+                    
+                    <form method="post" action="#">
+                        <input type="text" class="search-box-input" name="busca" placeholder="Faça sua Pesquisa">
+                        <button class="search-box-button"><i class="search-box-icone icon icon-search"></i></button>
+                    
+                    </form>
+                    
+                </div><!-- Search -->            
+            </div><!--Fim da barra de pesquisa interativa-->
+            
+
+        <div class="menu"> <!--Botões da barra-->
+            <nav>
+                <a href="#">CONTATO</a>
+                <a href="#">PUBLICAR</a>
+                
+            </nav>
+        </div>
         
-            <div class="pesquisar">
-            <div class="search-box">
-            
-                <form method="post" action="#">
-                    <input type="text" class="search-box-input" name="busca" placeholder="Faça sua Pesquisa">
-                    <button class="search-box-button"><i class="search-box-icone icon icon-search"></i></button>
-            
-                </form>
-            
-            </div><!-- Search -->
-    
-            </div><!--Pesquisar-->
-        </nav>
-    </div>
+        
+
+        <div class="menu2"> <!--Botão de Login presente na barra com efeito em negrito-->
+            <nav>
+                <p><a href="#"><b>LOGIN</b></a></p>
+
+            </nav>
+        </div>
+
+        </div><!--Fim do botão de Login-->
+
+        </div><!--Fim do Container-->
+
+        </a>
+        
+        </div>
     </header>
 
 <!--Cabecalho-->
 
-<!--Secoes-->
+<!--Cards
     <main>
         <section id="section-1">
             <header>
@@ -69,6 +87,7 @@
             </aside>
         </section>
 </main>
-<!--Secoes-->
+Cards--> 
+
 
 </html>

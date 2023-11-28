@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "untitled-font-1";
+  src: url("fonts-icones/untitled-font-1.woff") format("woff"),
+
+}
+
+
+
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+}
+
+
+.icon-search:before {
+  content: "\e153";
+}
