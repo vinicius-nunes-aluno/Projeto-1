@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Serve para indicar ao navegador que o arquivo se trata de uma página WEB-->
 <html lang="pt-br">
 <!--Css-->
 
-<head>
+<head> <!-- serve para iniciar o cabeçalho do site. Nele estarão contidas outras TAG's como "title", "meta" e "style"-->
     <link rel="icon" href="https://via.placeholder.com/70x70">
     <link rel="stylesheet" href="./mvp.css">
 
-    <meta charset="utf-8">
+    <meta charset="utf-8"> <!-- serve para funcionar os acentos em palavras-->
     <meta name="description" content="My description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,21 +20,28 @@
 </head>
 
 <!--Cabecalho-->
-<body>
+<body> <!-- a TAG "body" inicia o corpo de site, todo conteúdo posto após ela será exibida no navegador. O atributo "bgcolor" define qual será a cor de fundo-->
     <header>
         <nav>
             <a> <img src="logo.PNG"></a>
             <ul>
-                <li><a href="https://www.unifeso.edu.br/editora/sobre.php">SOBRE A EDITORA</a></li>
+                <li><a href="https://www.unifeso.edu.br/editora/sobre.php">LOGIN</a></li>
                 <li><a href="https://www.unifeso.edu.br/editora/informacoes.php">PUBLICAR</a></li>
-                <li><a href="https://www.unifeso.edu.br/editora/contato.php">CONTATO</a>
             </ul>
-    <div class="pesquisar">
-        <input type="text" class="pesquisar" placeholder="Pesquisar">
-        <a href="#">
-            <img src="lupa.svg" alt="Lupa" height="25" width="25">
-        </a>
         
+            <div class="pesquisar">
+            <div class="search-box">
+            
+                <form method="post" action="#">
+                    <input type="text" class="search-box-input" name="busca" placeholder="Faça sua Pesquisa">
+                    <button class="search-box-button"><i class="search-box-icone icon icon-search"></i></button>
+            
+                </form>
+            
+            </div><!-- Search -->
+    
+            </div><!--Pesquisar-->
+        </nav>
     </div>
     </header>
 
