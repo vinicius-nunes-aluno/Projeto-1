@@ -26,6 +26,7 @@ body { /* Esse body é para os cards*/
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Roboto';
 }
 
 header{
@@ -78,17 +79,7 @@ input[type="submit"] {
     color: #333d;
 }
 
-
-
-
 /*/*Fim da Interação do botão de login*/*/
-
-
-
-
-
-
-
 
 
 .Pesquisar{ /* Início dos códigos da Barra de pesquisa*/
@@ -156,10 +147,65 @@ input[type="submit"] {
     }
 } /* Fim dos códigos da Barra de pesquisa*/
 
+/* Início do user logado*/
+.user {
+    font-size: 16px;
+    font-family:'Roboto';
+    color: #ffffff
+}
+
+/* Fim do user logado*/
 
 
 
+/* Início da Introdução*/
+.introdução {
+    width: 2000px;
+    height: 350px;
+}
 
+.title-introdução {
+    font-size: 18px;
+    font-family: Roboto;
+    left: 50%;
+    text-align: center;
+    padding: 30px;
+    margin-top: 2%;
+
+}
+
+.text-introdução {
+    
+    font-size: 15px;
+    font-family:sans-serif;
+    line-height: 40px;
+    font-weight: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1%;
+}
+
+/* Fim da Introdução*/
+
+/* Início da Publicações*/
+
+.title-publicações {
+    font-size: 18px;
+    font-family: Roboto;
+    left: 50%;
+    text-align: center;
+    padding: 30px;
+    margin-top: 10px;
+}
+
+
+
+.campo-publicações button:hover{
+    background-color: #04bbb5;
+
+}
+
+/* Fim da Introdução*/
 
 /* CARDS*/
 main {
@@ -203,49 +249,3 @@ p {
 }
 
 /* Fim dos CARDS*/
-
-
-
-
-
-
-
-
-
-.introdução {
-    width: 2000px;
-    height: 350px;
-}
-
-.title-introdução {
-    font-size: 18px;
-    font-family: Roboto;
-    left: 50%;
-    text-align: center;
-    padding: 30px;
-    margin-top: 2%;
-
-}
-
-.text-introdução {
-    
-    font-size: 15px;
-    font-family:sans-serif;
-    line-height: 40px;
-    font-weight: 50px;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 2%;
-}
-
-/* Cursor fica com a seta clicável nos botões de interação (Curitr, comentar, compartilhar e baixar)*/
-.btn button{
-    cursor: pointer;
-
-}
-
-/* Obriga o texto do autor do artigo ficar em maiúsculo para dar destaque*/
-small{
-    text-transform: uppercase;
-}
-
