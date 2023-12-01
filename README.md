@@ -31,18 +31,3 @@ Utilizamos a ferramenta Trello, que é um modelo do Kanban, onde organizamos as 
 ++ Prototipação
 
 Através da realização de uma reunião online, fizemos um brainstorm na própria plataforma do Figma e montamos a prototipação de média fidelidade baseadas nelas, para que assim nós conseguirmos dar início ao desenvolvimento.
-
-++  Requisitos Funcionais e não-funcionais:
-	
-	*Funcionais:
-		Visualização Detalhada
-		Design e Identidade Visual
-		Sistema de Cadastro de Publicações
-		Cadastro de Usuários
-
-
-	*Não-Funcionais:
-		Controle de acesso
-		Usabilidade
-		Disponibilidade
-		Desempenho Rápido
