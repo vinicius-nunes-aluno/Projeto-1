@@ -4,7 +4,7 @@ Vinícius Nunes da Silva - **Mat. 06007628**
 
 Thiago Pereira dos Santos Oliveira - **Mat. 06007579**
 
-Ernâni - **Mat. 06007616**
+Ernani R. dos Santos Gama - **Mat. 06007743**
 
 ++ Descrição do projeto
 
@@ -35,13 +35,14 @@ Através da realização de uma reunião online, fizemos um brainstorm na própr
 ++  Requisitos Funcionais e não-funcionais:
 	
 	*Funcionais:
-		Cadastro e Login
-		Controle de Acesso
 		Visualização Detalhada
 		Design e Identidade Visual
+		Sistema de Cadastro de Publicações
+		Cadastro de Usuários
 
 
 	*Não-Funcionais:
-		Segurança
-		Responsividade
-		Desempenho
+		Controle de acesso
+		Usabilidade
+		Disponibilidade
+		Desempenho Rápido

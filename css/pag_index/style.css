@@ -78,17 +78,7 @@ input[type="submit"] {
     color: #333d;
 }
 
-
-
-
 /*/*Fim da Interação do botão de login*/*/
-
-
-
-
-
-
-
 
 
 .Pesquisar{ /* Início dos códigos da Barra de pesquisa*/
@@ -154,11 +144,8 @@ input[type="submit"] {
     .search-box:hover .search-box-input {
         width: 240px;
     }
-} /* Fim dos códigos da Barra de pesquisa*/
-
-
-
-
+} 
+/* Fim dos códigos da Barra de pesquisa*/
 
 
 /* CARDS*/
@@ -206,12 +193,7 @@ p {
 
 
 
-
-
-
-
-
-
+/*Texto introdução*/
 .introdução {
     width: 100%;
     height: 350px;
