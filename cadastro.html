@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pag_cadastro/style.css">
+    <title>Formulário de Cadastro</title> 
+</head>
+
+<body>
+    <div class="logo">
+        <img src="imagens/logo_cadastro.png">
+    </div>
+    <div class="container"><!--Começo do Container-->
+        <div class="form-image">
+            <img src="imagens/undraw_pic_profile_re_7g2h.svg" alt=""><!--Imagem ao lado-->
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="login.html">Entrar</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group"><!--Informações escritas-->
+                    <div class="input-box">
+                        <label for="firstname">Primeiro Nome</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required> <!--Campo de preenchimento do Primeiro Nome-->
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required> <!--Campo de preenchimento do Sobrenome-->
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required> <!--Campo de preenchimento do E-mail-->
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Matrícula</label>
+                        <input id="number" type="text" name="number" placeholder="Digite sua Matrícula " required> <!--Campo de preenchimento da Matrícula-->
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required> <!--Campo de preenchimento da Senha-->
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="confirmPassword">Confirme sua Senha</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required> <!--Campo de preenchimento de Confirme sua Senha-->
+                    </div>
+
+                </div>
+
+                <div class="actors-inputs"> <!--Campo para marcar-->
+                    <div class="actors-title">
+                        <h6>Você é?</h6>
+                    </div>
+
+                    <div class="actors-group">
+                        <div class="actors-input">
+                            <input id="student" type="radio" name="actors"> <!--Campo para o Aluno marcar-->
+                            <label for="student">Aluno</label>
+                        </div>
+
+                        <div class="actors-input">
+                            <input id="teacher" type="radio" name="actors"> <!--Campo para o Professor marcar-->
+                            <label for="teacher">Professor</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="continue-button"> <!--Botão para finalizar o cadastro-->
+                 <a href="novo.html">
+                    <button class="cadastroenc">Continuar</button>
+                 </a>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="scripts/script_cadastro.js"></script>
+</body>
+</html>

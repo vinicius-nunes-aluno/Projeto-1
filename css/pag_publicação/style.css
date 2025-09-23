@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+body { /* Bloco do corpo página */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333d;
+    position: relative;
+    
+}
+
+.logo { /* Formatação da Logo */
+  
+    position: fixed;
+    top: 0%;
+    margin-top: 20px;
+    
+}
+
+.form { /* Formatação do campo de formulário */
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+    position: relative;
+    border-radius: 5px;
+    
+    
+    
+}
+
+.title{
+    font-family: 'Roboto';
+}
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+
+}
+
+.input-box input { /* Formatação do Formulário */
+    margin: 0 auto;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000004b;
+    font-size: 0.8rem;
+    margin-top: 2%;
+}
+
+.input-box input:hover { /* Passar o mouse por cima mudar a cor */
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible { /* Cor das bordas dos Formulários */
+    outline: 1px solid #0abbb5;
+}
+
+.input-box label { /* Formataçãos dos títulos*/ 
+    font-size: 16px;
+    color: #000000c0;
+    font-family: 'Roboto';
+    margin: 0 auto;
+}
+
+.input-box input::placeholder { /* Formataçãos dos campos*/
+    color: #000000be;
+}
+
+.input-org label{
+    font-size: 16px;
+    color: #000000c0;
+    font-family: 'Roboto';
+    margin-left: 39%;
+    
+}
+
+.input-org input { /* Formatação do Formulário */
+    margin: 0.6rem 0;
+    padding: 15px 355px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    
+    
+}
+
+
+.input-org input:hover { /* Passar o mouse por cima mudar a cor */
+    background-color: #eeeeee75;
+}
+
+.input-org input:focus-visible { /* Cor das bordas dos Formulários */
+    outline: 1px solid #0abbb5;
+}
+
+
+.input-org input::placeholder { /* Formataçãos dos campos*/
+    color: #000000be;
+}
+
+
+.input-int label{
+    font-size: 16px;
+    color: #000000c0;
+    font-family: 'Roboto';
+    margin-left: 37%;
+}
+
+.input-int input { /* Formatação do Formulário */
+    margin: 0.6rem 0;
+    padding: 45px 355px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+ 
+    
+}
+
+
+.input-int input:hover { /* Passar o mouse por cima mudar a cor */
+    background-color: #eeeeee75;
+}
+
+.input-int input:focus-visible { /* Cor das bordas dos Formulários */
+    outline: 1px solid #0abbb5;
+}
+
+
+.input-int input::placeholder { /* Formataçãos dos campos*/
+    color: #000000be;
+}
+
+
+
+
+
+
+.continue-button button { /* Formataçãos do Botão de Continuar*/
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #0abbb5;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover { /* Passar o mouse por cima mudar a cor */
+    background-color: #6b63fff1;
+}
+
+.continue-button button a { /* Texto do Botão Continuar */
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+.anexo-button{
+    background-color: #aaaaaac0;
+    width: 865px;
+    height: 100px;
+    border-radius: 5px;
+    border: #0000004b;
+    box-shadow: 1px 1px 6px #0000001c;
+    cursor: pointer;
+    font-size: 15px;
+    
+
+
+
+}
+
+
+.anexo:hover { /* Passar o mouse por cima mudar a cor */
+    background-color: #808080c0;
+    border-radius: 5px;
+}

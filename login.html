@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(imagens/livrosbackground.jpeg); background-repeat: no-repeat; background-attachment: fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+        }
+        
+        logo{ 
+            background-color: rgba(255, 255, 255, 0);
+            position: absolute;
+            top: 13%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 80px;
+            border-radius: 15px;
+            color: #fff;
+        }
+        
+        cadastro{
+            color: rgb(255, 255, 255);
+        }
+        
+        a{
+            color: rgb(0, 143, 253)
+        }
+
+        div{
+            background-color: #333d;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 100px;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 9px;
+        }
+
+        input{
+            padding: 17px;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            outline: 1px solid #0abbb5;
+            border-radius: 10px;
+        }
+
+        button{
+            background-color: #0abbb5;
+            border: none;
+            padding: 17px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 17px;
+            
+        }
+
+        button:hover{
+            background-color: #006864;;
+            cursor: pointer;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <logo>
+            <img src="imagens/logo.png" />
+        </logo>
+        <br><br><br>
+        
+        <h1>Faça seu Login: </h1>
+        <input type="text" placeholder="Matrícula ">
+        <br><br>
+        <input type="password" placeholder="Senha">
+        <br><br>
+        <a href="logado.html">
+            <button class="logger">Entrar</button>
+        </a>
+	
+
+        <h2> 
+            <cadastro>
+                Caso não tenha cadastro, <a href="cadastro.html">clique aqui</a>.
+            </cadastro>
+        </h2>
+
+    </div>
+<script src="scripts/script_login.js"></script>
+
+
+</body>
+</html>
