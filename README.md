@@ -1,33 +1,37 @@
-++ Autores do projeto
+📚 Plataforma de Publicações Acadêmicas – Editora Unifeso
 
-Vinícius Nunes da Silva - **Mat. 06007628**
+👥 Autores do Projeto
 
-Thiago Pereira dos Santos Oliveira - **Mat. 06007579**
+Vinícius Nunes da Silva – Matrícula: 06007628
 
-Ernani R. dos Santos Gama - **Mat. 06007743**
+Thiago Pereira dos Santos Oliveira – Matrícula: 06007579
 
-++ Descrição do projeto
+🎯 Escolha da Situação-Problema
 
-A disciplina de MVP aborda o conceito de Menor Produto Viável onde o foco é na solução prática para um desenvolvimento com rapidez e baixo custo. Desenvolvido por alunos da Unifeso como ferramenta de avaliação da disciplina **MVP Front-End Development**.
+Fomos desafiados a criar, com base nas ferramentas estudadas de front-end, back-end e desenvolvimento mobile, uma plataforma web que proporcione acesso rápido e fácil às publicações acadêmicas da Editora Unifeso.
+O objetivo é simplificar a experiência de descoberta e acesso aos trabalhos publicados, garantindo que a produção acadêmica de todos os autores receba a visibilidade que merece.
 
-++ Objetivo e Situação problema
+💡 Descrição do MVP
 
-Fomos desafiados a criar, com base nas ferramentas já estudadas de front-end, uma plataforma web que proporcione acesso rápido e fácil às publicações acadêmicas da Editora Unifeso. Queremos simplificar a experiência de descoberta e acesso aos trabalhos publicados, garantindo que a produção acadêmica de todos que postarem receba a visibilidade que merece.
+Nosso MVP consiste em uma versão simplificada para atualização do site da Editora Unifeso, permitindo que os usuários encontrem e visualizem publicações acadêmicas de maneira mais prática e intuitiva.
+Nesta etapa, o foco é apresentar uma base funcional que demonstre a viabilidade do projeto e ofereça uma navegação clara e objetiva.
 
-++ Instruções para utilização
+🖥️ Instruções para Executar o MVP Localmente
 
-A página inicial do site exibirá uma interface semelhante para todos os perfis de usuário. O usuário de primeira instância poderá pesquisar as publicações e visualizar as mesmas, mas para publicar de fato necessitará de um breve cadastro feito no próprio portal e efetuando o login. Após o mesmo, o usuário poderá, além de publicar, interagir, visualizar e baixar as publicações já postadas na pagina inicial. O usuário também poderá editar suas próprias publicações no painel de controle. O login do Administrador poderá gerenciar todas as postagens do site e aprovar as publicações pendentes de aprovação dos usuários.
+(Em desenvolvimento)
 
-++ Tecnologias aplicadas
+🛠️ Tecnologias Aplicadas
 
-Toda a estrutura do site foi elaborada com HTML e a estilização em CSS. A confirmação de login é apresentada através de JavaScript. A ferramenta principal de desenvolvimento foi o VS Code.
+Front-end: HTML, CSS, JavaScript
 
-++ Ferramentas aplicadas
+Back-end: Node.js
 
-Realizamos o levantamento dos Requisitos Funcionais e Não Funcionais com base nos requerimentos descritos pela instituição e nas funções aplicadas ao sistema.
+Ferramenta de Desenvolvimento: Visual Studio Code
 
-Utilizamos a ferramenta Trello, que é um modelo do Kanban, onde organizamos as atividades realizadas durante os estágios de programação. Também utilizamos o Figma para realizar os protótipos de média fidelidade e o Discord para compartilhamento de tela e repositório de arquivos da equipe.
+🧩 Ferramentas Utilizadas
 
-++ Prototipação
+Trello: organização de tarefas com metodologia Kanban.
 
-Através da realização de uma reunião online, fizemos um brainstorm na própria plataforma do Figma e montamos a prototipação de média fidelidade baseadas nelas, para que assim nós conseguirmos dar início ao desenvolvimento.
+Figma: criação de protótipos de média fidelidade.
+
+Discord: comunicação da equipe e compartilhamento de arquivos.
