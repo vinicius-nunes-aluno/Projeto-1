@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pag_publicação/style.css">
+    <title>Formulário de Publicação</title>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="imagens/logo_cadastro.png">
+    </div>
+
+    <div class="form">
+        <!-- enctype é obrigatório para enviar arquivos -->
+        <form id="form-publication" enctype="multipart/form-data">
+            <div class="form-header">
+                <div class="title">
+                    <h1><strong>PUBLICAR</strong></h1>
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="title">Título da Publicação</label>
+                    <input id="title" type="text" name="title" placeholder="Digite seu título aqui" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="pages">Número de Páginas</label>
+                    <input id="pages" type="number" name="pages" placeholder="Digite a quantidade de páginas" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="publishDate">Data da publicação</label>
+                    <input id="publishDate" type="date" name="publishDate" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="category">Categorias</label>
+                    <input id="category" type="text" name="category" placeholder="Digite uma categoria da obra" required>
+                </div>
+
+                <div class="input-org">
+                    <label for="organizer">Nome do Organizador(es)</label><br>
+                    <input id="organizer" type="text" name="organizer" required>
+                </div>
+
+                <div class="input-int">
+                    <label for="introduction">Introdução sobre a Publicação</label>
+                    <input id="introduction" type="text" name="introduction" required>
+                </div>
+            </div>
+
+            <!-- Upload de imagem -->
+            <div class="anexo">
+                <input id="cover" type="file" name="cover" accept="image/*" style="display:none;" required>
+                <button type="button" id="coverButton" class="anexo-button">
+                    Anexe aqui uma imagem para capa de Publicação
+                </button>
+                <span id="fileName" style="margin-left:10px;"></span>
+            </div>
+
+            <div class="continue-button">
+                <button type="submit" class="cadastroenc">Continuar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const coverInput  = document.getElementById('cover');
+        const coverButton = document.getElementById('coverButton');
+        const fileName    = document.getElementById('fileName');
+
+        // abre a janela de seleção ao clicar no botão
+        coverButton.addEventListener('click', () => coverInput.click());
+
+        // mostra o nome do arquivo escolhido
+        coverInput.addEventListener('change', () => {
+            fileName.textContent = coverInput.files[0]?.name || '';
+        });
+
+        // exemplo simples de envio usando fetch
+        document.getElementById('form-publication').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+
+            const res = await fetch('http://localhost:3000/api/publications', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await res.json();
+            alert(data.message || 'Publicação enviada!');
+        });
+    </script>
+</body>
+</html>
