@@ -58,3 +58,4 @@ loginForm.addEventListener('submit', async (e) => {
         alert('Não foi possível conectar ao servidor. Tente novamente mais tarde.');
     }
 });
+

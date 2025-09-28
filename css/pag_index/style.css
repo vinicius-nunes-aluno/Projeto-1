@@ -230,3 +230,58 @@ small{
     text-transform: uppercase;
 }
 
+/* ======================================================= */
+/* REGRAS DE RESPONSIVIDADE PARA CADASTRO.HTML             */
+/* Estas regras ajustam a estrutura de duas colunas para   */
+/* uma única coluna em dispositivos móveis.                */
+/* ======================================================= */
+
+@media screen and (max-width: 991px) {
+    
+    /* 1. O Container Principal se torna um Flexbox de Coluna */
+    .container {
+        /* A flex-direction: column-reverse pode garantir que o formulário 
+           fique em cima, mas pode não ser ideal se a imagem não for 'display: none' */
+        flex-direction: column; 
+        padding: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        max-width: 95%; 
+    }
+
+    /* 2. Esconde a Imagem Lateral para economizar espaço */
+    .form-image {
+        display: none; 
+    }
+
+    /* 3. O Formulário Ocupa a Largura Total */
+    .form {
+        width: 100%;
+        /* Adicione padding interno ou ajuste de margens se necessário */
+    }
+    
+    /* 4. Inputs em linha única (se eles estavam lado a lado) */
+    .input-group {
+        flex-direction: column;
+        overflow-y: scroll; 
+        flex-wrap: nowrap;
+        height: auto;
+        padding-right: 5px; 
+    }
+
+    .input-box {
+        margin-bottom: 20px;
+    }
+
+    /* 5. Ajusta o campo de "Você é?" */
+    .actors-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* 6. Ajusta a imagem do logo (se houver) */
+    .logo img {
+        max-width: 150px; 
+    }
+}
+
