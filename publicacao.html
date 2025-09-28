@@ -63,6 +63,14 @@
                 <span id="fileName" style="margin-left:10px;"></span>
             </div>
 
+            <div class="anexo" style="margin-top: 1rem;">
+                <input id="contentFile" type="file" name="contentFile" accept=".pdf,.doc,.docx" style="display:none;" required>
+                <button type="button" id="contentFileButton" class="anexo-button">
+                    Anexe aqui o arquivo da Publicação (PDF, DOCX)
+                </button>
+                <span id="contentFileName" style="margin-left:10px;"></span>
+            </div>
+
             <div class="continue-button">
                 <button type="submit" class="cadastroenc">Continuar</button>
             </div>
@@ -70,31 +78,53 @@
     </div>
 
     <script>
+        // --- Lógica para os botões de anexo ---
         const coverInput  = document.getElementById('cover');
         const coverButton = document.getElementById('coverButton');
         const fileName    = document.getElementById('fileName');
+        const form        = document.getElementById('form-publication');
 
-        // abre a janela de seleção ao clicar no botão
         coverButton.addEventListener('click', () => coverInput.click());
-
-        // mostra o nome do arquivo escolhido
         coverInput.addEventListener('change', () => {
             fileName.textContent = coverInput.files[0]?.name || '';
         });
 
-        // exemplo simples de envio usando fetch
-        document.getElementById('form-publication').addEventListener('submit', async (e) => {
+        const contentFileInput  = document.getElementById('contentFile');
+        const contentFileButton = document.getElementById('contentFileButton');
+        const contentFileName   = document.getElementById('contentFileName');
+
+        contentFileButton.addEventListener('click', () => contentFileInput.click());
+        contentFileInput.addEventListener('change', () => {
+            contentFileName.textContent = contentFileInput.files[0]?.name || '';
+        });
+
+        // --- Lógica de envio do formulário ---
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
 
-            const res = await fetch('http://localhost:3000/api/publications', {
-                method: 'POST',
-                body: formData
-            });
-
-            const data = await res.json();
-            alert(data.message || 'Publicação enviada!');
+            try {
+                const res = await fetch('http://localhost:2018/api/publications', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (res.ok) {
+                    const data = await res.json();
+                    alert(data.message || 'Publicação enviada com sucesso!');
+                    form.reset(); 
+                    fileName.textContent = '';
+                    contentFileName.textContent = '';
+                } else {
+                    const errorData = await res.json();
+                    alert(`Erro: ${errorData.error || 'Não foi possível enviar a publicação.'}`);
+                }
+            } catch (error) {
+                console.error('Erro de rede:', error);
+                alert('Não foi possível conectar ao servidor. Verifique se ele está rodando.');
+            }
         });
     </script>
+
 </body>
 </html>

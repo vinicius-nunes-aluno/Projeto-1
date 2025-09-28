@@ -207,7 +207,7 @@ body { /* Bloco do corpo página */
     .input-group { /* Adiciona responsividade */
         flex-direction: column;
         z-index: 5;
-        padding-right: 1rem;
+        padding-right: 5rem;
         max-height: 10rem;
         overflow-y: scroll;
         flex-wrap: nowrap;
@@ -225,90 +225,3 @@ body { /* Bloco do corpo página */
         margin-top: 0.5rem;
     }
 }
-
-/* ======================================================= */
-/* OTIMIZAÇÃO PARA SMARTPHONES (Telas até 600px)           */
-/* ======================================================= */
-
-@media screen and (max-width: 600px) { 
-
-    body {
-        /* Permite que o body se comporte de forma fluida sem a centralização rígida de flex */
-        display: block; 
-    }
-
-    .logo {
-        /* Remove o posicionamento absoluto rígido, centraliza a logo e dá espaço */
-        position: relative;
-        top: auto;
-        margin: 20px auto;
-        width: 100%;
-        text-align: center;
-    }
-
-    .logo img {
-        /* Garante que a imagem da logo não fique muito grande */
-        max-width: 100px;
-        height: auto;
-    }
-    
-    .container {
-        /* Reduz o width para 95% e remove box-shadow no mobile, se desejar */
-        width: 95vw; 
-        height: auto;
-        /* Garante que ele flua para baixo do logo */
-        margin: 0 auto 30px auto; 
-        box-shadow: none;
-    }
-
-    .form {
-        /* Reduz o padding interno do formulário para caber na tela */
-        padding: 2rem 1rem; 
-        width: 100%; /* Garante largura total dentro do container */
-    }
-    
-    .form-header {
-        /* Centraliza o cabeçalho e botão de Entrar em telas pequenas */
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 1.5rem;
-        gap: 10px;
-    }
-    
-    .login-button {
-        /* Garante que o botão de login se ajuste bem */
-        width: 100%;
-        text-align: center;
-    }
-
-    .input-group {
-        /* Reduz o padding vertical se necessário, mas mantém a coluna */
-        padding: 0.5rem 0; 
-        /* ATENÇÃO: Mantenha ou remova as regras de 'overflow-y: scroll' do @1064px 
-           dependendo se você quer o scroll apenas na parte dos inputs. 
-           Geralmente, é melhor remover o 'padding-right: 5rem' do bloco anterior 
-           para evitar a barra de rolagem horizontal. */
-    }
-    
-    .continue-button button {
-        /* Aumenta o padding do botão para ser mais fácil de clicar */
-        padding: 0.8rem;
-    }
-}
-
-/* ⚠️ REVISÃO DO BLOCO EXISTENTE (Para evitar barra de rolagem horizontal) ⚠️ */
-/* No seu CSS atual, o bloco de 1064px tem uma regra problemática: */
-/*
-@media screen and (max-width: 1064px) {
-    ...
-    .input-group {
-        ...
-        padding-right: 5rem; <--- ISTO PODE CAUSAR SCROLL HORIZONTAL
-        ...
-    }
-}
-*/
-/* Sugiro que você altere o 'padding-right: 5rem;' para 'padding-right: 0;' ou 'padding-right: 1rem;' 
-   dentro do seu bloco @media screen and (max-width: 1064px) existente para garantir 
-   que ele funcione corretamente em todos os dispositivos. */
-
