@@ -230,11 +230,12 @@ small{
     text-transform: uppercase;
 }
 
+/*<<<<<<< HEAD*/
 /* ======================================================= */
 /* REGRAS DE RESPONSIVIDADE PARA CADASTRO.HTML             */
 /* Estas regras ajustam a estrutura de duas colunas para   */
 /* uma única coluna em dispositivos móveis.                */
-/* ======================================================= */
+/* ======================================================= *//*
 
 @media screen and (max-width: 991px) {
     
@@ -284,4 +285,5 @@ small{
         max-width: 150px; 
     }
 
-}
+
+
