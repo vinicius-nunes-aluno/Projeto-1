@@ -1,5 +1,4 @@
 import express from 'express'
-<<<<<<< HEAD
 const cors = require('cors')
 import bodyParser from 'body-parser'
 import userController from './controllers/user'
