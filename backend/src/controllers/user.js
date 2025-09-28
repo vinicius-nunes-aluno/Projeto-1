@@ -109,6 +109,7 @@ router.post('/login', loginUser) // ⬅️ Rota adicionada
 router.post('/register', registerUser) // <-- Rota de cadastro adicionada
 
 // ROTAS DE CRUD DE USUÁRIO
+
 router.get('/', async (req, res) => {
     const userList = await listUsers()
     res.send(userList)
@@ -118,20 +119,24 @@ router.post('/', async (req, res) => {
     try {
         const user = await createUser(req.body)
         res.status(201).send(user)
+
     } catch (err) {
         // Enviar apenas a mensagem de erro ou usar um middleware de tratamento de erro
         res.status(400).send({ message: err.message }) 
     }
+
 })
 
 router.delete('/:userId', async (req, res) => {
     await deleteUser(req.params.userId)
     res.status(204).send() // Status 204 No Content é o padrão para DELETE bem-sucedido
+
 })
 
 router.put('/:userId', async (req, res) => {
     await updateUser(req.params.userId, req.body)
     res.status(200).send() // Ou retorne o objeto atualizado
+
 })
 
 export default router
