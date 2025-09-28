@@ -3,6 +3,7 @@ const cors = require('cors')
 import bodyParser from 'body-parser'
 import userController from './controllers/user'
 import connectDB from './utils/database.js'; // Ajuste o caminho conforme necessário
+import publicationRoutes from './routes/publicationRoutes.js'
 const app = express()
 const port = 90
 
@@ -24,6 +25,12 @@ app.get('/', (req, res) => {
 })
 
 app.use('/user', userController)
+
+// 🔹 Servir a pasta de uploads
+app.use('/uploads', express.static('uploads'))
+
+// Rotas de publicação
+app.use('/api/publications', publicationRoutes)
 
 // ---------------------------------------------------------
 // 🚀 INICIALIZAÇÃO CORRETA DO SERVIDOR
