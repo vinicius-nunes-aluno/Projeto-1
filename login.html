@@ -78,31 +78,34 @@
 </head>
 <body>
 
-    <div>
-        <logo>
-            <img src="imagens/logo.png" />
-        </logo>
-        <br><br><br>
-        
-        <h1>Faça seu Login: </h1>
-        <input type="text" placeholder="Matrícula ">
+
+
+<div class="login-box"> <logo>
+        <img src="imagens/logo.png" />
+    </logo>
+    <br><br><br>
+    
+    <h1>Faça seu Login: </h1>
+
+    <form id="loginForm"> 
+        <input type="text" placeholder="Matrícula" name="uniqueid" required>
         <br><br>
-        <input type="password" placeholder="Senha">
+        <input type="password" placeholder="Senha" name="password" required>
         <br><br>
-        <a href="logado.html">
-            <button class="logger">Entrar</button>
-        </a>
-	
+    
+    <button type="submit" class="logger">Entrar</button>
 
-        <h2> 
-            <cadastro>
-                Caso não tenha cadastro, <a href="cadastro.html">clique aqui</a>.
-            </cadastro>
-        </h2>
+    </form>
+    
+    <h2> 
+        <cadastro>
+            Caso não tenha cadastro, <a href="cadastro.html">clique aqui</a>.
+        </cadastro>
+    </h2>
 
-    </div>
-<script src="scripts/script_login.js"></script>
+</div>
 
+<script src="./scripts/script_login.js"></script> 
 
 </body>
 </html>
