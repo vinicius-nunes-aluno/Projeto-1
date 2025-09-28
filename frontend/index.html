@@ -145,7 +145,7 @@
 
             try {
                 // 1. Busca as publicações no backend
-                const response = await fetch('http://localhost:2018/api/publications');
+                const response = await fetch('http://localhost:90/api/publications');
                 
                 if (!response.ok) {
                     throw new Error('Não foi possível carregar as publicações.');
@@ -171,7 +171,7 @@
                         <section>
                             <aside>
                                 <h3><center>${pub.title}</center></h3>
-                                <p><center><img src="http://localhost:2018/uploads/${pub.cover}" height="200px" width="240px"></center></p>
+                                <p><center><img src="http://localhost:90/uploads/${pub.cover}" height="200px" width="240px"></center></p>
                                 <p><center><small>
                                     Autor(a): ${pub.organizer}<br>
                                     N° de páginas: ${pub.pages}<br>
@@ -183,7 +183,7 @@
                                         <button><img src="imagens/comentario.svg" height="40px" width="40px"></button>
                                         <button><img src="imagens/compartilhar.svg" height="40px" width="40px"></button>
                                         
-                                        <a href="http://localhost:2018/uploads/${pub.contentFile}" download>
+                                        <a href="http://localhost:90/uploads/${pub.contentFile}" download>
                                             <button><img src="imagens/download.png" height="40px" width="40px"></button>
                                         </a>
                                     </div>
