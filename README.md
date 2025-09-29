@@ -24,7 +24,7 @@ Nesta etapa, o foco é apresentar uma base funcional que demonstre a viabilidade
 
 Front-end: HTML, CSS, JavaScript
 
-Back-end: Node.js
+Back-end: Node.js, Express.js, Mongoose.js, MongoDB e Bcrypt
 
 Ferramenta de Desenvolvimento: Visual Studio Code
 
