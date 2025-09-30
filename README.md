@@ -25,6 +25,17 @@ Nosso MVP é uma **versão simplificada e funcional** que visa modernizar o site
 | **Desenvolvimento** | **Visual Studio Code** |
 | **Design/Comunicação** | **Figma** (Criação de protótipos de média fidelidade), **Discord** (Comunicação da equipe e compartilhamento de arquivos) |
 
+### 📦 Dependências do Back-end
+
+As principais dependências utilizadas no arquivo `package.json` para o funcionamento do servidor e API são:
+
+* `express`: Framework web para Node.js.
+* `mongoose`: Modelagem de dados para MongoDB.
+* `body-parser`: Processamento de corpo de requisições HTTP.
+* `cors`: Habilita o compartilhamento de recursos entre diferentes origens.
+* `multer`: Middleware para manipulação de `multipart/form-data` (upload de arquivos).
+* `babel-cli`: Ferramenta para executar comandos Babel.
+
 ---
 
 ## 💻 Como Executar o MVP Localmente
@@ -33,17 +44,17 @@ Siga os passos para configurar e executar o projeto em sua máquina:
 
 1.  **Pré-requisitos:** Certifique-se de ter o **Node.js** e o **MongoDB** instalados em seu ambiente.
 2.  **Instalação de Dependências:**
-    * Navegue até a pasta **`backend`** e execute: `npm install`
-    * (Repita o passo para a pasta **`frontend`** se for necessário instalar dependências específicas.)
+    * Navegue até a pasta **`backend`**.
+    * Execute o comando: `npm install` (Isso instalará as dependências listadas, como Express, Mongoose, etc.).
+    * *(Repita o passo para a pasta **`frontend`** se for necessário instalar dependências específicas.)*
 3.  **Inicialização do Servidor (Back-end):**
-    * Dentro da pasta **`backend`**, execute o comando:
+    * Dentro da pasta **`backend`**, execute o comando para rodar o servidor em modo de desenvolvimento:
         ```bash
         npm run dev
         ```
-    * O servidor será iniciado, geralmente na porta 3000 ou 3333 (verifique o arquivo de configuração do seu projeto).
-
+    * O servidor será iniciado. Verifique o console para a porta de acesso (geralmente 3000 ou 3333).
 4.  **Acesso ao Front-end:**
-    * (Se o front-end for estático e não precisar de um servidor específico, abra o arquivo `index.html` no seu navegador. Se usar um servidor de desenvolvimento, inicie-o e acesse a URL indicada.)
+    * Acesse o front-end estático abrindo o arquivo **`index.html`** no seu navegador, ou inicie o servidor de desenvolvimento do front-end (se houver) e acesse a URL indicada.
 
 ---
 
