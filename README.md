@@ -1,37 +1,53 @@
-📚 Plataforma de Publicações Acadêmicas – Editora Unifeso
+# 📚 Plataforma de Publicações Acadêmicas da Editora Unifeso
 
-👥 Autores do Projeto
+## ✨ Visão Geral do Projeto
 
-Vinícius Nunes da Silva – Matrícula: 06007628
+Este projeto consiste na criação de uma plataforma web moderna, desenvolvida para proporcionar acesso rápido, fácil e intuitivo às **publicações acadêmicas da Editora Unifeso**.
 
-Thiago Pereira dos Santos Oliveira – Matrícula: 06007579
+O principal desafio foi utilizar as tecnologias estudadas em **front-end**, **back-end** e **desenvolvimento mobile** para simplificar a experiência de descoberta e visualização de trabalhos. Nosso objetivo é garantir que a produção acadêmica de todos os autores receba a visibilidade que merece.
 
-🎯 Escolha da Situação-Problema
+---
 
-Fomos desafiados a criar, com base nas ferramentas estudadas de front-end, back-end e desenvolvimento mobile, uma plataforma web que proporcione acesso rápido e fácil às publicações acadêmicas da Editora Unifeso.
-O objetivo é simplificar a experiência de descoberta e acesso aos trabalhos publicados, garantindo que a produção acadêmica de todos os autores receba a visibilidade que merece.
+## 🚀 MVP (Produto Mínimo Viável)
 
-💡 Descrição do MVP
+Nosso MVP é uma **versão simplificada e funcional** que visa modernizar o site atual da Editora Unifeso.
 
-Nosso MVP consiste em uma versão simplificada para atualização do site da Editora Unifeso, permitindo que os usuários encontrem e visualizem publicações acadêmicas de maneira mais prática e intuitiva.
-Nesta etapa, o foco é apresentar uma base funcional que demonstre a viabilidade do projeto e ofereça uma navegação clara e objetiva.
+**Foco:** Apresentar uma base sólida que demonstre a viabilidade do projeto, com ênfase na **navegação clara** e **intuitiva** para que os usuários encontrem e visualizem publicações de forma mais prática.
 
-🖥️ Instruções para Executar o MVP Localmente
+---
 
-(Em desenvolvimento)
+## 🛠️ Tecnologias e Ferramentas
 
-🛠️ Tecnologias Aplicadas
+| Categoria | Tecnologias Utilizadas |
+| :--- | :--- |
+| **Front-end** | HTML, CSS, JavaScript |
+| **Back-end** | **Node.js**, **Express.js** (framework), **Mongoose.js** (ODM), **MongoDB** (banco de dados), **Bcrypt** (criptografia de senhas) |
+| **Desenvolvimento** | **Visual Studio Code** |
+| **Design/Comunicação** | **Figma** (Criação de protótipos de média fidelidade), **Discord** (Comunicação da equipe e compartilhamento de arquivos) |
 
-Front-end: HTML, CSS, JavaScript
+---
 
-Back-end: Node.js, Express.js, Mongoose.js, MongoDB e Bcrypt
+## 💻 Como Executar o MVP Localmente
 
-Ferramenta de Desenvolvimento: Visual Studio Code
+Siga os passos para configurar e executar o projeto em sua máquina:
 
-🧩 Ferramentas Utilizadas
+1.  **Pré-requisitos:** Certifique-se de ter o **Node.js** e o **MongoDB** instalados em seu ambiente.
+2.  **Instalação de Dependências:**
+    * Navegue até a pasta **`backend`** e execute: `npm install`
+    * (Repita o passo para a pasta **`frontend`** se for necessário instalar dependências específicas.)
+3.  **Inicialização do Servidor (Back-end):**
+    * Dentro da pasta **`backend`**, execute o comando:
+        ```bash
+        npm run dev
+        ```
+    * O servidor será iniciado, geralmente na porta 3000 ou 3333 (verifique o arquivo de configuração do seu projeto).
 
-Trello: organização de tarefas com metodologia Kanban.
+4.  **Acesso ao Front-end:**
+    * (Se o front-end for estático e não precisar de um servidor específico, abra o arquivo `index.html` no seu navegador. Se usar um servidor de desenvolvimento, inicie-o e acesse a URL indicada.)
 
-Figma: criação de protótipos de média fidelidade.
+---
 
-Discord: comunicação da equipe e compartilhamento de arquivos.
+## 👥 Autores do Projeto
+
+* **Vinícius Nunes da Silva** – Matrícula: 06007628
+* **Thiago Pereira dos Santos Oliveira** – Matrícula: 06007579
