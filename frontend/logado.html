@@ -43,7 +43,7 @@
         <div class="menu"> <!--Botões da barra-->
             <nav>
                 <a href="#">CONTATO</a>
-                <a href="publicação.html">PUBLICAR</a>
+                <a href="publicacao.html">PUBLICAR</a>
                 
             </nav>
         </div>
@@ -88,16 +88,17 @@
     </div>
     
     <main>
-        
+    
             <section>
             <aside>
                 <h3><center>Resíduos orgânicos alternativos nos processos de compostagem e vermicompostagem</center></h3>
-                <p><center><img src="imagens/pag_logado_com_publi/artigo1.png" height="200px" width="240px"></center></p>
-                <p><center><small>Autor(a): Cátia Araújo Farias<br>Data de publicação: 01/09/2019</small></center></p>
+                <p><center><img src="imagens/artigo1.png" height="200px" width="240px"></center></p>
+                <p><center><small>Autor(a): Cátia Araújo Farias<br>ISBN: 978-85-93361-31-9<br>N° de páginas: 144<br>Data de publicação: 01/09/2019</small></center></p>
                 <hr><Center>
                     <Div class="btn">
-                        <button><img src="imagens/lápis.png" height="40px" width="40px"> </button>
-                        <button><img src="imagens/lixeira.svg" height="40px" width="40px"></button>
+                        <button><img src="imagens/curtir.png" height="40px" width="40px"> </button>
+                        <button><img src="imagens/comentario.svg" height="40px" width="40px"></button>
+                        <button><img src="imagens/compartilhar.svg" height="40px" width="40px"></button>
                         <a href="pdf/residuos.pdf">
                             <button><img src="imagens/download.png" height="40px" width="40px"></button>
                         </a>
@@ -105,33 +106,35 @@
                     </Center><hr>
             </aside>
             </section>
-            
-            <section>
-            <aside>
-                <h3><center>Um olhar sociológico sobre o conceito de trabalho</center></h3>
-                <p><center><img src="imagens/pag_logado_com_publi/artigo2.png" height="200px" width="240px"></center></p>
-                <p><Center><small>Autor(a): Paulo Sérgio de Oliveira<br>Data de publicação: 26/05/2021</small></Center></p>
-                <hr><Center>
-                    <Div class="btn">
-                        <button><img src="imagens/lápis.png" height="40px" width="40px"> </button>
-                        <button><img src="imagens/lixeira.svg" height="40px" width="40px"></button>
-                        <a href="pdf/olhar.pdf">
-                            <button><img src="imagens/download.png" height="40px" width="40px"></button>
-                        </a>
-                    </Div>
-                    </Center><hr>
-            </aside>
-            </section>
 
             <section>
             <aside>
-                <h3><center>Um congresso dos estudantes de medicina do Unifeso</center></h3>
-                <p><center><img src="imagens/pag_logado_com_publi/artigo3.png" height="200px" width="240px"></center></p>
-                <p><Center><small>Autor(a): Cátia Araújo Farias<br>Data de publicação: 17/01/2021</small></Center></p>
+                <h3><center>Um olhar sociológico sobre o conceito de trabalho</center></h3>
+                <p><center><img src="imagens/artigo2.png" height="200px" width="240px"></center></p>
+                <p><Center><small>Autor(a): Paulo Sérgio de Oliveira<br>ISBN: 978-85-93361-30-2<br>N° de páginas: 118<br>Data de publicação: 26/05/2021</small></Center></p>
                 <hr><Center>
                     <Div class="btn">
-                        <button><img src="imagens/lápis.png" height="40px" width="40px"> </button>
-                        <button><img src="imagens/lixeira.svg" height="40px" width="40px"></button>
+                        <button><img src="imagens/curtir.png" height="40px" width="40px"> </button>
+                        <button><img src="imagens/comentario.svg" height="40px" width="40px"></button>
+                        <button><img src="imagens/compartilhar.svg" height="40px" width="40px"></button>
+                        <a href="pdf/olhar.pdf">
+                            <button><img src="imagens/download.png" height="40px" width="40px"></button>
+                        </a>
+                    </div>
+                    </Center><hr>
+            </aside>
+            </section>
+            
+            <section>
+            <aside>
+                <h3><center>Um congresso dos estudantes de medicina do Unifeso</center></h3>
+                <p><center><img src="imagens/artigo3.png" height="200px" width="240px"></center></p>
+                <p><Center><small>Autor(a): Cátia Araújo Farias<br>ISBN: 978-65-87357-31-7<br>N° de páginas: 147<br>Data de publicação: 17/01/2021</small></Center></p>
+                <hr><Center>
+                    <Div class="btn">
+                        <button><img src="imagens/curtir.png" height="40px" width="40px"> </button>
+                        <button><img src="imagens/comentario.svg" height="40px" width="40px"></button>
+                        <button><img src="imagens/compartilhar.svg" height="40px" width="40px"></button>
                         <a href="pdf/congresso.pdf">
                             <button><img src="imagens/download.png" height="40px" width="40px"></button>
                         </a>
@@ -139,24 +142,73 @@
                     </Center><hr>
             </aside>
             </section>
-       
+        
         
     </main>
+    <script>
+        // Esta função será executada assim que a página terminar de carregar
+        window.onload = async () => {
+            const mainContainer = document.querySelector('main');
 
+            try {
+                // 1. Busca as publicações no backend
+                const response = await fetch('http://localhost:90/api/publications');
+                
+                if (!response.ok) {
+                    throw new Error('Não foi possível carregar as publicações.');
+                }
 
+                const publications = await response.json();
 
+                // 2. Limpa o conteúdo estático que está no HTML
+                mainContainer.innerHTML = '';
 
+                if (publications.length === 0) {
+                    mainContainer.innerHTML = '<p style="text-align: center; font-size: 1.2rem;">Nenhuma publicação encontrada.</p>';
+                    return;
+                }
 
+                // 3. Para cada publicação, cria um card e insere na página
+                publications.forEach(pub => {
+                    // Formata a data para o padrão brasileiro (dd/mm/aaaa)
+                    const formattedDate = new Date(pub.publishDate).toLocaleDateString('pt-BR');
 
+                    // Cria o HTML do card com os dados da publicação
+                    const publicationCardHTML = `
+                        <section>
+                            <aside>
+                                <h3><center>${pub.title}</center></h3>
+                                <p><center><img src="http://localhost:90/uploads/${pub.cover}" height="200px" width="240px"></center></p>
+                                <p><center><small>
+                                    Autor(a): ${pub.organizer}<br>
+                                    N° de páginas: ${pub.pages}<br>
+                                    Data de publicação: ${formattedDate}
+                                </small></center></p>
+                                <hr><Center>
+                                    <div class="btn">
+                                        <button><img src="imagens/curtir.png" height="40px" width="40px"></button>
+                                        <button><img src="imagens/comentario.svg" height="40px" width="40px"></button>
+                                        <button><img src="imagens/compartilhar.svg" height="40px" width="40px"></button>
+                                        
+                                        <a href="http://localhost:90/uploads/${pub.contentFile}" download>
+                                            <button><img src="imagens/download.png" height="40px" width="40px"></button>
+                                        </a>
+                                    </div>
+                                </Center>
+                                <hr>
+                            </aside>
+                        </section>
+                    `;
 
+                    // 4. Adiciona o card recém-criado ao container principal
+                    mainContainer.innerHTML += publicationCardHTML;
+                });
 
-
-
-
-    
-    
-    
-    
-    
+            } catch (error) {
+                console.error('Erro ao buscar publicações:', error);
+                mainContainer.innerHTML = '<p style="text-align: center; color: red;">Falha ao carregar as publicações. Verifique se o servidor está no ar.</p>';
+            }
+        };
+    </script>
+</body>
 </html>
-

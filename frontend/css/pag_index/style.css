@@ -162,17 +162,12 @@ hr {
     margin: 0.45rem 0;
 }
 
-/* ESSA DICA PODE SER IMPORTANTE PARA ALINHAR O CADASTRO*/
-
-
-
 section {
     display: flex;
     justify-content: center;
+    /* Adicionado para responsividade dos cards */
+    flex-wrap: wrap; 
 }
-
-/* ESSA DICA PODE SER IMPORTANTE PARA ALINHAR O CADASTRO*/
-
 
 section aside {
     border: 1px solid #e9e9e9;
@@ -230,60 +225,91 @@ small{
     text-transform: uppercase;
 }
 
-/*<<<<<<< HEAD*/
 /* ======================================================= */
-/* REGRAS DE RESPONSIVIDADE PARA CADASTRO.HTML             */
-/* Estas regras ajustam a estrutura de duas colunas para   */
-/* uma única coluna em dispositivos móveis.                */
-/* ======================================================= *//*
+/* REGRAS DE RESPONSIVIDADE PARA INDEX.HTML - CABEÇALHO (CORRIGIDO) */
+/* ======================================================= */
 
-@media screen and (max-width: 991px) {
-    
-    /* 1. O Container Principal se torna um Flexbox de Coluna */
-    .container {
-        /* A flex-direction: column-reverse pode garantir que o formulário 
-           fique em cima, mas pode não ser ideal se a imagem não for 'display: none' */
-        flex-direction: column; 
-        padding: 30px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        max-width: 95%; 
+@media screen and (max-width: 768px) {
+    /* 1. O Container Principal do Header se torna uma Coluna e ganha padding */
+    header .container {
+        flex-direction: column;
+        align-items: center; 
+        padding: 10px; /* Adiciona padding horizontal para evitar que toque as bordas */
     }
 
-    /* 2. Esconde a Imagem Lateral para economizar espaço */
-    .form-image {
-        display: none; 
-    }
-
-    /* 3. O Formulário Ocupa a Largura Total */
-    .form {
+    /* 2. Todos os elementos do header ocupam a largura total e se centralizam */
+    .logo, .menu, .menu2 {
         width: 100%;
-        /* Adicione padding interno ou ajuste de margens se necessário */
+        text-align: center;
+        margin-top: 5px;
     }
     
-    /* 4. Inputs em linha única (se eles estavam lado a lado) */
-    .input-group {
-        flex-direction: column;
-        overflow-y: scroll; 
-        flex-wrap: nowrap;
-        height: auto;
-        padding-right: 5px; 
-    }
-
-    .input-box {
-        margin-bottom: 20px;
-    }
-
-    /* 5. Ajusta o campo de "Você é?" */
-    .actors-group {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    /* 6. Ajusta a imagem do logo (se houver) */
+    /* 3. Centraliza a imagem da logo */
     .logo img {
-        max-width: 150px; 
+        margin: 0 auto;
+        display: block;
+    }
+    
+    /* 4. Redefine a Busca */
+    .pesquisar {
+        width: 95%; /* Quase largura total com um respiro */
+        margin: 10px 0;
+    }
+    
+    .search-box form {
+        width: 100%;
     }
 
+    /* 5. CORREÇÃO CRÍTICA: Garante que o input da pesquisa esteja visível e expandido */
+    /* O !important é usado para forçar a anulação do width: 0 do desktop */
+    .search-box-input {
+        width: calc(100% - 45px) !important; 
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+    }
+    
+    /* 6. Mantém a largura expandida mesmo com hover em dispositivos de toque */
+    .search-box:hover .search-box-input {
+        width: calc(100% - 45px); 
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 
+    /* 7. Stacking dos links do menu */
+    .menu nav {
+        display: flex;
+        flex-direction: column;
+        gap: 5px; 
+    }
+    
+    .menu nav a {
+        padding: 5px 0;
+    }
+    
+    /* 8. Ajusta o botão LOGIN */
+    .menu2 nav p {
+        margin: 5px 0;
+    }
+    
+    .menu2 nav a b, 
+    .menu2 nav a i, 
+    .menu2 nav a strong {
+        padding: 0.4rem 4rem; 
+    }
+    
+    /* 9. Ajusta a seção de introdução */
+    .introdução {
+        height: auto; 
+    }
 
+    .text-introdução {
+        line-height: 1.5; 
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    /* 10. Ajusta os cards dos artigos */
+    main {
+        padding: 1
+    }
+}  
